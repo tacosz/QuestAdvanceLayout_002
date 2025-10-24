@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">My Layout</string>
     <string name="nama"> Nabil Nasruddin Al Mutawakkil</string>
+    <string name="alamat"> Sidoarjo, Jawa Timur</string>
 </resources>
