@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">My Layout</string>
-    <string name="nama"> Nabil Nasruddin Al Mutawakkil</string>
-    <string name="alamat"> Sidoarjo, Jawa Timur</string>
-    <string name="prodi"> Teknologi Informasi</string>
-    <string name="univ"> Universitas Muhammadiyah Yogyakarta</string>
+    <string name="nama">Nabil Nasruddin Al Mutawakkil</string>
+    <string name="alamat">Sidoarjo, Jawa Timur</string>
+    <string name="prodi">Teknologi Informasi</string>
+    <string name="univ">Universitas Muhammadiyah Yogyakarta</string>
     <string name="copy">Copyright, 2025</string>
 </resources>
