@@ -1,6 +1,7 @@
 package com.example.pertemuan4pam
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -65,6 +66,7 @@ fun ActivitasPertama(modifier: Modifier){
                         .size(size = 100.dp)
                         .padding(all = 5.dp)
                 )
+
                 Spacer(modifier = Modifier.width(width = 30.dp))
                 Column() {
                     Text(
@@ -81,9 +83,11 @@ fun ActivitasPertama(modifier: Modifier){
                         modifier = Modifier.padding(top = 10.dp)
                     )
                 }
-
-
             }
         }
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+        )
     }
 }
