@@ -14,15 +14,18 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -35,7 +38,7 @@ fun BMWProfile(modifier: Modifier) {
         modifier = Modifier
             .fillMaxSize()
             .background(backgroundColor)
-            .padding(70.dp),
+            .padding(top = 70.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Card(
@@ -116,15 +119,61 @@ fun BMWProfile(modifier: Modifier) {
             color = Color.White,
             fontSize = 18.sp
         )
-        Card(
-            modifier = Modifier
-                .fillMaxWidth(fraction = 1f)
-                .padding(all = 12.dp),
-            colors = CardDefaults.cardColors(containerColor = Color.Gray)
-        ) {
-            Row() {
-                val
+
+        // val nama_variabel : strukturdata<kunci, nilai> = membuatmap("kunci" to "value")
+        val judul : Map<String, String> = mapOf("models" to "Models", "shop" to "Shop Online", "contact" to "Contact")
+
+        //deklarasi seluruh gambar yang akan dimunculkan
+        val models = painterResource(id = R.drawable.models)
+        val shop = painterResource(id = R.drawable.shoponline)
+        val contact = painterResource(id = R.drawable.contact)
+
+        //membuat map gambar
+        val icon : Map<String, Painter> = mapOf("models" to models, "shop" to shop, "contact" to contact )
+
+        //perulangan menggunakan forEach(auto memisahkan key dan value)
+        judul.forEach { (key, value) ->
+
+            //!! memastikan val fotos not null
+            val fotos = icon[key]!!
+
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(all =5.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.Gray)
+            ) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+
+                    Image(
+                        painter = fotos,
+                        contentDescription = null,
+                        modifier = Modifier
+                            .size(80.dp)
+                            .padding(10.dp)
+                            .clip(CircleShape)
+                    )
+                    Text(text = value,
+                        fontSize = 20.sp,
+                        fontWeight = FontWeight.Bold,
+                        fontFamily = FontFamily.Monospace,
+                        modifier = Modifier
+                            .align(alignment = Alignment.CenterVertically).weight(1f)
+                    )
+                    Spacer(modifier = Modifier
+                        .width(100.dp))
+                    val arrow = painterResource(id = R.drawable.arrow)
+                    Image(
+                        painter = arrow,
+                        contentDescription = "Arrow right",
+                        modifier = Modifier.padding(end = 10.dp).size(25.dp).clip(CircleShape),
+                        contentScale = ContentScale.FillBounds
+                    )
+                }
             }
         }
+
     }
 }
