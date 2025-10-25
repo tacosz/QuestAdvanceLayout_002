@@ -54,7 +54,7 @@ fun BMWProfile(modifier: Modifier) {
             )
         }
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(5.dp))
         Row(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier.padding(10.dp)
@@ -65,7 +65,32 @@ fun BMWProfile(modifier: Modifier) {
                 painter = x,
                 contentDescription = null,
                 modifier = Modifier
-                    .size(size = 100.dp)
+                    .size(size = 35.dp)
+                    .clip(CircleShape)
+            )
+            val ig = painterResource(id = R.drawable.ig)
+            Image(
+                painter = ig,
+                contentDescription = null,
+                modifier = Modifier
+                    .size(size = 35.dp)
+                    .clip(CircleShape)
+            )
+            val yt = painterResource(id = R.drawable.yt)
+            Image(
+                painter = yt,
+                contentDescription = null,
+                modifier = Modifier
+                    .size(size = 35.dp)
+                    .clip(CircleShape)
+            )
+            val li = painterResource(id = R.drawable.li)
+            Image(
+                painter = li,
+                contentDescription = null,
+                modifier = Modifier
+                    .size(size = 35.dp)
+                    .clip(CircleShape)
             )
         }
         Text(
