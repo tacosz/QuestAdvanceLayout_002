@@ -50,7 +50,9 @@ fun BMWProfile(modifier: Modifier) {
             fontWeight = FontWeight.Bold
         )
         Text(
-            text = stringResource(id = )
+            text = stringResource(id = R.string.ig),
+            color = Color.Gray,
+            fontSize = 15.sp
         )
     }
 }
