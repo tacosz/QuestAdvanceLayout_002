@@ -37,6 +37,6 @@ fun BMWProfile(modifier: Modifier) {
                 .size(150.dp)
                 .clip(CircleShape)
         )
-        Spacer(modifier = Modifier.height())
+        Spacer(modifier = Modifier.height(16.dp))
     }
 }
