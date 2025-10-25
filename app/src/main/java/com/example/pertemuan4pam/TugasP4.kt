@@ -2,6 +2,7 @@ package com.example.pertemuan4pam
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -14,7 +15,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -27,6 +27,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -120,6 +121,8 @@ fun BMWProfile(modifier: Modifier) {
             fontSize = 18.sp
         )
 
+        Spacer(modifier = Modifier.padding(bottom = 25.dp))
+
         // val nama_variabel : strukturdata<kunci, nilai> = membuatmap("kunci" to "value")
         val judul : Map<String, String> = mapOf("models" to "Models", "shop" to "Shop Online", "contact" to "Contact")
 
@@ -174,6 +177,14 @@ fun BMWProfile(modifier: Modifier) {
                 }
             }
         }
-
+        Box(modifier = Modifier
+            .fillMaxSize()){
+            Text(stringResource(id = R.string.cr),
+                textAlign = TextAlign.Center,
+                color = Color.White,
+            modifier = Modifier
+                .align(alignment = Alignment.BottomCenter)
+                .padding(bottom = 30.dp))
+        }
     }
 }
