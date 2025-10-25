@@ -68,6 +68,7 @@ fun BMWProfile(modifier: Modifier) {
                     .size(size = 35.dp)
                     .clip(CircleShape)
             )
+            Spacer(modifier = Modifier.width(width = 7.dp))
             val ig = painterResource(id = R.drawable.ig)
             Image(
                 painter = ig,
@@ -76,6 +77,7 @@ fun BMWProfile(modifier: Modifier) {
                     .size(size = 35.dp)
                     .clip(CircleShape)
             )
+            Spacer(modifier = Modifier.width(width = 7.dp))
             val yt = painterResource(id = R.drawable.yt)
             Image(
                 painter = yt,
@@ -84,6 +86,7 @@ fun BMWProfile(modifier: Modifier) {
                     .size(size = 35.dp)
                     .clip(CircleShape)
             )
+            Spacer(modifier = Modifier.width(width = 7.dp))
             val li = painterResource(id = R.drawable.li)
             Image(
                 painter = li,
