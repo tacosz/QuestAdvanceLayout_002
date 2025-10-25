@@ -40,7 +40,8 @@ fun BMWProfile(modifier: Modifier) {
         Card(
             modifier = Modifier.size(140.dp),
             shape = CircleShape,
-            elevation = CardDefaults.cardColors(containerColor = Color.Transparent)
+            colors = CardDefaults.cardColors(containerColor = Color.Transparent),
+            elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
         ) {
             val bmw = painterResource(R.drawable.bmw)
             Image(
