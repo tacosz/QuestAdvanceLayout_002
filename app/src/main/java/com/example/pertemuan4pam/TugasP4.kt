@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -30,7 +31,7 @@ fun BMWProfile(modifier: Modifier) {
         modifier = Modifier
             .fillMaxSize()
             .background(backgroundColor)
-            .padding(110.dp),
+            .padding(70.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(
@@ -52,6 +53,14 @@ fun BMWProfile(modifier: Modifier) {
         Text(
             text = stringResource(id = R.string.ig),
             color = Color.Gray,
+            fontSize = 15.sp
+        )
+
+        Spacer(modifier = Modifier.width(8.dp))
+
+        Text(
+            text = stringResource(id = R.string.desc),
+            color = Color.White,
             fontSize = 15.sp
         )
     }
